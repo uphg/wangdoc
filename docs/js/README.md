@@ -16,6 +16,6 @@ title: '文档说明'
 
 本教程适合初学者当作 JavaScript 语言入门教程，学完后就可以承担实际的网页开发工作，也适合当作日常使用的参考手册。
 
-JavaScript 后续新增的 ES6 语法，请看[《ES6 标准入门教程》](https://wangdoc.com/es6/)。
+JavaScript 后续新增的 ES6 语法，请看[《ES6 标准入门教程》](../es6/)。
 
 > 本文档为搬运，原文档地址：[JavaScript 教程](https://wangdoc.com/javascript/)
