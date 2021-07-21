@@ -3,8 +3,8 @@
     <div class="page-index-title" @click="clickIndex()">
       <span class="open-catalog" :class="{ active: showIndex }">
         <svg
-          class="icon arrow-right"
-          :class="{ show: showIndex }"
+          class="page-index-icon arrow-right"
+          :class="{ 'is-down': showIndex }"
           aria-hidden="true"
           id="icon-arrow-right"
           viewBox="0 0 1024 1024"
@@ -57,6 +57,7 @@ export default {
 </script>
 <style lang="stylus">
 $marginTop = 2rem
+$pageArrowSize = 10px
 .page-index {
   max-width: 740px;
   margin: $marginTop auto -1rem;
@@ -117,7 +118,7 @@ $marginTop = 2rem
   display: flex;
   align-items: center;
 
-  .icon {
+  .page-index-icon {
     margin-top: 1px;
     width: $pageArrowSize;
     height: $pageArrowSize;
@@ -131,7 +132,7 @@ $marginTop = 2rem
   height: 10px;
   transition: transform 0.16s ease-out;
 
-  &.show {
+  &.is-down {
     transform: rotate(90deg);
   }
 }
