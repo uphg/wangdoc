@@ -101,7 +101,12 @@ blockquote
   // padding .25rem 0 .25rem 1rem
   padding .9rem 1.2rem
   background-color #f3f5f7
-
+  & > :last-child {
+    margin-bottom: 0;
+  }
+  & > :first-child {
+    margin-top: 0;
+  }
   & > p
     margin 0
 
