@@ -12,8 +12,7 @@
 
       <h1
         v-if="data.heroText !== null"
-        id="main-title"
-        style="font-size: 120px; text-shadow: 5px 5px 0 #FFC947;"
+        class="home-title"
       >
         {{ data.heroText || $title || 'Hello' }}
       </h1>
@@ -97,10 +96,12 @@ export default {
       max-height 280px
       display block
       margin 3rem auto 1.5rem
-    h1
-      font-size 3rem
     h1, .description, .action
       margin 1.8rem auto
+    .home-title
+      padding-top 0
+      font-size 120px
+      text-shadow 5px 5px 0 #FFC947
     .description
       max-width 35rem
       font-size 1.6rem
@@ -147,6 +148,9 @@ export default {
 
 @media (max-width: $MQMobile)
   .home
+    .hero .home-title
+      font-size 60px
+      text-shadow 3px 3px 0 #FFC947
     .features
       flex-direction column
     .feature
