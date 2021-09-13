@@ -2,6 +2,7 @@ var nav = require("./navbar/index")
 var sidebar = require("./sidebar/index")
 
 module.exports = {
+  theme: 'vuepress-theme-uphg',
   base: '/wangdoc/',
   lang: 'zh-CN',
   title: 'WangDoc',
@@ -18,18 +19,6 @@ module.exports = {
     sidebar,
   },
   plugins: [
-    /* [
-      'vuepress-plugin-medium-zoom',
-      {
-        selector: '.page img',
-        delay: 1000,
-        options: {
-          margin: 24,
-          background: 'rgba(0, 0, 0, 0.6)',
-          scrollOffset: 0,
-        },
-      },
-    ], */
     [
       '@vuepress/pwa',
       {
@@ -41,19 +30,6 @@ module.exports = {
           }
         }
       }
-    ],
-    ['container', {
-      type: 'info',
-      before: text => `<div class="custom-block info"><p class="custom-block-title">${text}</p>`,
-      after: '</div>',
-    }],
-  ],
-  markdown: {
-    /** @param {import('markdown-it')} md */
-    extendMarkdown: md => {
-      md.options.highlight = require('./markdown/highlight')(
-        md.options.highlight
-      )
-    }
-  }
+    ]
+  ]
 }
